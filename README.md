@@ -43,8 +43,8 @@
 ******************************************************
 **Descrição do Problema: http://prntscr.com/nvzdeu**
 
-Conhecendo-se o valor de um parâmetro a fornecido, as amplitudes de deslocamentos de vários pêndulos são
-dadas pela expressão `a*d', onde 'd1, d2,..., dn` são os deslocamentos dos pêndulos. Cada um dos deslocamentos
+Conhecendo-se o valor de um `parâmetro a` fornecido, as amplitudes de deslocamentos de vários pêndulos são
+dadas pela expressão `a*d`, onde `d1, d2,..., dn` são os deslocamentos dos pêndulos. Cada um dos deslocamentos
 pode ser calculado através da solução de um sistema linear `Cd = v`, que pode ser resolvido pela regra de
 Cramer, onde cada deslocamento é dado por `di = detC_{i}/detC` onde `detC` é o determinante da matriz dos
 coeficientes `C` e `detC_{i}` é o determinante da matriz obtida trocando-se a coluna `i` pelo vetor d dos termos
@@ -64,8 +64,8 @@ d) Fornecer quadro resposta para cada método, variando os valores de `[C]` e de
        1    1    10                12
 
 
-- Dados de entrada: n (número de pêndulos), parâmetro a, os termos de [C]nxn e os termos de {v}nx1.
+- Dados de entrada: `n(número de pêndulos)`, `parâmetro a`, os termos de `[C]_{nxn}` e os termos de `[v]_{nx1}.
 
-- Dados de saída: termos de {d}nx1 que representam os n deslocamentos d1, d2,..., dn e as amplitudes.
+- Dados de saída: termos de `[d]_{nx1}` que representam os `n` deslocamentos `d1, d2,..., dn` e as amplitudes.
 
 
