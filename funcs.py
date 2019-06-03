@@ -1,9 +1,18 @@
+###############################################################
+#AUTOR: MARCOS VINICIUS FREITAS PINTO
+#INSTITUIÇÃO: UNIVERSIDADE FEDERAL DO CEARÁ
+#CURSO: ESTATÍSTICA
+#CONTATO: marcos.freitasp@alu.ufc.br
+###############################################################
+#coding:utf-8
 import numpy as np
 from ptables import prettytable
 
+#FUNÇÃO PARA LEITURA DOS DADOS EM ARQUIVO
 def read_Matriz(arquivo):
 	return [tuple([float(num) for num in line.split(';')]) for line in arquivo]
 
+#FUNÇÃO PARA TRANSFORMAR A MATRIZ TUPLA EM LISTA
 def transf_List(matriz):
 	matriz_tmp = list(matriz)
 	for i in range(len(matriz)):
@@ -11,6 +20,7 @@ def transf_List(matriz):
 	
 	return matriz_tmp
 
+#FUNÇÃO PARA MOSTRAR OS DADOS DA MATRIZ
 def show_Matriz(matriz):
 	for i in range(len(matriz)):
 		
@@ -22,6 +32,7 @@ def show_Matriz(matriz):
 			else:
 				print("%7.3f " %matriz[i][j], end = " ")
 
+#FUNÇÃO PARA ESCREVER OS DADOS NO ARQUIVO DE RESULTADOS
 def write_Matriz(matriz, vetor, res_Cramer, res_Gauss, res_GJordan,res_Final, determs, param_A):
 	arq_res = open('res_Sistema.txt', 'a')
 	##########
@@ -50,13 +61,16 @@ def write_Matriz(matriz, vetor, res_Cramer, res_Gauss, res_GJordan,res_Final, de
 	arq_res.close()
 	return 0
 
+#FUNÇÃO PARA NÃO ACEITAR VALORES MENORES OU IGUAIS A ZERO
 def dif_Zero(var):
 	var_tmp = float(input("\nDigite um valor para o %s: " %str(var)))
 	while var_tmp <= 0:
 		var_tmp = float(input("\nDigite um valor para o %s MAIOR QUE ZERO: " %var))
 
 	return var_tmp
-def triang_Matriz(matriz_tmp, vetor_tmp, gauss): #FUNÇÃO PARA TRANSFORMAR A MATRIZ EM TRIANGULAR SUPERIOR
+
+#FUNÇÃO PARA TRANSFORMAR A MATRIZ EM TRIANGULAR SUPERIOR
+def triang_Matriz(matriz_tmp, vetor_tmp, gauss):
 	mod = 0
 	for i in range(len(matriz_tmp) - 1):
 
@@ -88,13 +102,15 @@ def triang_Matriz(matriz_tmp, vetor_tmp, gauss): #FUNÇÃO PARA TRANSFORMAR A MA
 	else:
 		return matriz_tmp, mod, vetor_tmp
 
+#FUNÇÃO PARA TROCAR A COLUNA DESEJADA DA MATRIZ PELO VETOR INDEPENDENTE
 def troca_Coluna(matriz, vetor, col):
 	for i in range(len(matriz)):
 		matriz[i][col] = vetor[0][i]
 	
 	return matriz
 
-def determ_Matriz(matriz, vetor, det_OG): #FUNÇÃO PARA CALCULAR O DETERMINANTE DA MATRIZ
+#FUNÇÃO PARA CALCULAR O DETERMINANTE DA MATRIZ
+def determ_Matriz(matriz, vetor, det_OG):
 	determs = np.ones(len(matriz) + 1)
 
 	if det_OG:
@@ -138,6 +154,7 @@ def subs_Retroativa(matriz, vetor):
 
 	return res
 
+#FUNÇÃO PARA CALCULAR OS VALORES DAS VARIAVEIS PELO METODO DE CRAMER
 def Cramer(determs):
 	varvs = np.zeros(len(determs) - 1)
 	for i in range(len(determs) - 1):
@@ -147,6 +164,7 @@ def Cramer(determs):
 
 	return varvs
 
+#FUNÇÃO PARA CALCULAR OS VALORES DAS VARIAVEIS PELO METODO DE GAUSS
 def Gauss(matriz, vetor):
 	vetor_tmp = transf_List(vetor)
 	(matriz_tmp, mod, vetor_tmp) = triang_Matriz(transf_List(matriz), vetor_tmp, 1)
@@ -154,6 +172,7 @@ def Gauss(matriz, vetor):
 
 	return res
 
+#FUNÇÃO PARA CALCULAR OS VALORES DAS VARIAVEIS PELO METODO DE GAUSS-JORDAN
 def Gauss_Jordan(matriz, vetor):
 	mod = 0
 	matriz_tmp = transf_List(matriz) 
@@ -190,6 +209,7 @@ def Gauss_Jordan(matriz, vetor):
 			res[i] = 0
 	return res
 
+#FUNÇÃO PARA CALCULAR O VALOR DOS DESLOCAMENTOS DOS PENDULOS
 def res_Final(res_Cramer, res_Gauss, res_GJordan, param_A):
 	res_tmp = []
 
