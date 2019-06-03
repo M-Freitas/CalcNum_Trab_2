@@ -1,17 +1,28 @@
+###############################################################
+#AUTOR: MARCOS VINICIUS FREITAS PINTO
+#INSTITUIÇÃO: UNIVERSIDADE FEDERAL DO CEARÁ
+#CURSO: ESTATÍSTICA
+#CONTATO: marcos.freitasp@alu.ufc.br
+###############################################################
+#coding:utf-8
 import os, platform
 from ptables import prettytable
 
+#FUNÇÃO PARA LIMPAR A TELA
 def clear():
 	if(platform.system()) == 'Windows':
 		os.system('cls')
 	else:
 		os.system('clear')
 
+#FUNÇÃO PRESSIONE :|
 def enter(opc):
 	if opc == 1:
 		input("\nPressione a tecla ENTER para prosseguir, caso tenha certeza que os arquivos\nestão criados.")
 	if opc == 2:
 		input("\nPressione a tecla ENTER para terminar o programa")
+
+#FUNÇÃO PARA CRIAÇÃO DOS ARQUIVOS NECESSÁRIOS, CASO ESTEJAM FALTANDO.
 def loop_arq(dir_dpd, dir_idpd):
 	while (os.path.exists(dir_dpd) and os.path.exists(dir_idpd)) != True:
 		input("\nARQUIVOS INEXISTENTES!!\nPressione a tecla ENTER para que sejam criados!!\n")
@@ -21,6 +32,7 @@ def loop_arq(dir_dpd, dir_idpd):
 		arq_idpd.close()
 	return 0
 
+#FUNÇÃO DE INFORMAÇÕES NECESSÁRIAS PARA O PROGRAMA
 def msg_user():
 	table_show = prettytable.PrettyTable()
 	table_show.title = "---------- Elimanação por Gauss e Gauss-Jordan ----------"
