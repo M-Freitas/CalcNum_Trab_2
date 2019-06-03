@@ -1,8 +1,14 @@
 # TRABALHO - CÁLCULO NÚMERICO
 > **Marcos Vinicius Freitas Pinto - 476644 - Universidade Federal do Ceará**
-
+==================================================
 **Pré-requisitos:**
 
+* Windows e Linux: Python 3.6 ou superior
+==================================================
+**Arquivos Necessários para Execução:**
+
+
+===================================================
 **Descrição do Problema: http://prntscr.com/nvzdeu**
 
 Conhecendo-se o valor de um parâmetro a fornecido, as amplitudes de deslocamentos de vários pêndulos são
