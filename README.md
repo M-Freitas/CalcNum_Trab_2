@@ -7,6 +7,15 @@
 * Windows e Linux: Python 3.6 ou superior
 ******************************************************
 
+**Execução do Programa via Terminal**
+
+1. Windows:
+
+   - Entre via comandos de terminal na pasta em que encontra-se os arquivos do programa. Por exemplo:
+     - `cd Downloads\CalcNum_Trab_2-master`
+     
+******************************************************
+
 **Arquivos Necessários para Execução:**
 
 1. No mesmo diretório da execução:
