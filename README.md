@@ -1,7 +1,7 @@
 # TRABALHO - CÁLCULO NÚMERICO
-**Marcos Vinicius Freitas Pinto - 476644 - Universidade Federal do Ceará**
+## **Marcos Vinicius Freitas Pinto - 476644 - Universidade Federal do Ceará**
 
-**Descrição do Problema: http://prntscr.com/nvzdeu**
+## **Descrição do Problema: http://prntscr.com/nvzdeu**
 
 Conhecendo-se o valor de um parâmetro a fornecido, as amplitudes de deslocamentos de vários pêndulos são
 dadas pela expressão a*d, onde d1, d2,..., dn são os deslocamentos dos pêndulos. Cada um dos deslocamentos
