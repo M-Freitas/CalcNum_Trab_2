@@ -1,4 +1,10 @@
-#coding: utf-8
+###############################################################
+#AUTOR: MARCOS VINICIUS FREITAS PINTO
+#INSTITUIÇÃO: UNIVERSIDADE FEDERAL DO CEARÁ
+#CURSO: ESTATÍSTICA
+#CONTATO: marcos.freitasp@alu.ufc.br
+###############################################################
+#coding:utf-8
 import numpy as np
 import funcs, show_menu
 
