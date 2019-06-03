@@ -45,8 +45,16 @@ def write_Matriz(matriz, vetor, res_Cramer, res_Gauss, res_GJordan,res_Final, de
 	arq_res.write("\nVetor Independente:\n\n")
 	for i in range(len(vetor[0])):
 		arq_res.write("%7.3f " %vetor[0][i])
+	arq_res.write("\n---------------------------------------------------------------------\n\n")
 	
-	arq_res.write("\n---------------------------------------------------------------------\n")
+	table_det = prettytable.PrettyTable()
+	table_det.field_names = ["Determinante do Sistema pelo Método de Cramer"]
+	table_det.align["Determinante do Sistema pelo Método de Cramer"] = 'l'
+	table_det.add_row(["Determinante do sistema: %0.3f\n" %determs[0]])
+	for i in range(1, len(determs)):
+		table_det.add_row(["Determinante do sistema trocando a %dª pelo vetor independente: %0.3f\n" %(i, determs[i])])
+	arq_res.write(str(table_det))
+	arq_res.write("\n\n--------------------------------------------------------------------------\n\n")
 
 	table_res = prettytable.PrettyTable()
 	table_res.title = "----------------- Resultado dos Métodos -----------------"
@@ -57,9 +65,9 @@ def write_Matriz(matriz, vetor, res_Cramer, res_Gauss, res_GJordan,res_Final, de
 			table_res.add_row(["D_{%d}" %(i + 1),"%0.3f" %param_A ,"%0.3f" %(res_Cramer[i]), "%0.3f" %(res_Gauss[i]), "%0.3f" %(res_GJordan[i]), "%0.3f" %res_Final[i]])
 
 	arq_res.write(str(table_res))
-	arq_res.write("\n---------------------------------------------------------------------\n\n")
+	arq_res.write("\n\n---------------------------------------------------------------------\n\n")
 	arq_res.close()
-	return 0
+
 
 #FUNÇÃO PARA NÃO ACEITAR VALORES MENORES OU IGUAIS A ZERO
 def dif_Zero(var):
