@@ -13,7 +13,15 @@
 
    - Entre via comandos de terminal na pasta em que encontra-se os arquivos do programa. Por exemplo:
      - `cd Downloads\CalcNum_Trab_2-master`
-     
+   - Já na pasta do programa digite `py main.py`.
+   - Faça os procedimentos fundamentais que é pedido no programa
+   
+2. Linux:
+   - Entre via comandos de terminal na pasta em que encontra-se os arquivos do programa. Por exemplo:
+     - `cd Downloads/CalcNum_Trab_2-master`
+   - Já na pasta do programa digite `python main.py`.
+   - Faça os procedimentos fundamentais que é pedido no programa
+ 
 ******************************************************
 
 **Arquivos Necessários para Execução:**
