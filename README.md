@@ -20,7 +20,7 @@
    - Arquivo nomeado como `Termos_idpd.txt` contendo os valores dos termos independentes do sistema de equação. Por exemplo:
       
           10x +  y  +  z   = 12
-          x   + 10y +  z   = 12 --------------> 12;12;12 ----> sendo essa matriz salva no arquivo desta maneira
+          x   + 10y +  z   = 12 --------------> 12;12;12 ----> sendo esse vetor salva no arquivo desta maneira
           x   +  y  +  10z = 12   
           
 ******************************************************
