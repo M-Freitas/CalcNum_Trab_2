@@ -9,6 +9,18 @@
 
 **Arquivos Necessários para Execução:**
 
+1. No mesmo diretório da execução:
+   - Arquivo nomeado como `Termos_dpd.txt` contendo os valores dos termos dependentes do sistema de equação. Por exemplo:
+   
+   `x + y + z`   = 2            1;1;1
+   `10x + y - z` = 1 ------->   10;1;-1 sendo essa matriz salva no arquivo desta maneira.
+   `2x - y - z`  = 1            2;-1;-1
+   
+   - Arquivo nomeado como `Termos_idpd.tx` contendo os valores dos termos independentes do sistema de equação. Por exemplo:
+   
+   x + y + z   = `2`           
+   10x + y - z = `1` ------->   2;1;1 sendo essa matriz salva no arquivo desta maneira.
+   2x - y - z  = `1`            
 ******************************************************
 **Descrição do Problema: http://prntscr.com/nvzdeu**
 
