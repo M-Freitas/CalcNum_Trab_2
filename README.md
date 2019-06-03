@@ -13,14 +13,14 @@
    - Arquivo nomeado como `Termos_dpd.txt` contendo os valores dos termos dependentes do sistema de equação. Por exemplo:
    
           10x +  y  +  z   = 12                 10;1;1 
-          x   + 10y +  z   = 12 --------------> 1;10;1 -----------------> sendo essa matriz salva no arquivo desta maneira
+          x   + 10y +  z   = 12 --------------> 1;10;1 ------> sendo essa matriz salva no arquivo desta maneira
           x   +  y  +  10z = 12                 1;1;10  
 
    
    - Arquivo nomeado como `Termos_idpd.txt` contendo os valores dos termos independentes do sistema de equação. Por exemplo:
       
           10x +  y  +  z   = 12
-          x   + 10y +  z   = 12 --------------> 12;12;12 -----------------> sendo essa matriz salva no arquivo desta maneira
+          x   + 10y +  z   = 12 --------------> 12;12;12 ----> sendo essa matriz salva no arquivo desta maneira
           x   +  y  +  10z = 12   
           
 ******************************************************
