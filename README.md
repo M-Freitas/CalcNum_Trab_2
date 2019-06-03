@@ -1,7 +1,7 @@
 # TRABALHO - CÁLCULO NÚMERICO
-## **Marcos Vinicius Freitas Pinto - 476644 - Universidade Federal do Ceará**
+> **Marcos Vinicius Freitas Pinto - 476644 - Universidade Federal do Ceará**
 
-- **Pré-requisitos:**
+**Pré-requisitos:**
 
 **Descrição do Problema: http://prntscr.com/nvzdeu**
 
@@ -26,8 +26,8 @@ d) Fornecer quadro resposta para cada método, variando os valores de `[C]` e de
        1    1    10                12
 
 
-*Dados de entrada: n (número de pêndulos), parâmetro a, os termos de [C]nxn e os termos de {v}nx1.
+- Dados de entrada: n (número de pêndulos), parâmetro a, os termos de [C]nxn e os termos de {v}nx1.
 
-*Dados de saída: termos de {d}nx1 que representam os n deslocamentos d1, d2,..., dn e as amplitudes.
+- Dados de saída: termos de {d}nx1 que representam os n deslocamentos d1, d2,..., dn e as amplitudes.
 
 
