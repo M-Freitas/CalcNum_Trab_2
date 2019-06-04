@@ -81,12 +81,17 @@ def dif_Zero(var):
 def quad_Matriz(matriz):
 	equals = True
 	major = 0
+	count = 0
 	for i in range(len(matriz)):
+		count += 1
 		if (len(matriz[0]) ==  len(matriz[i])):
 			continue
 		else:
 			equals = False
 			major = i
+	if (count != len(matriz)):
+		equals = False
+		
 	return equals, major
 
 #FUNÇÃO PARA TRANSFORMAR A MATRIZ EM TRIANGULAR SUPERIOR
