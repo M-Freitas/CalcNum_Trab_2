@@ -1,5 +1,5 @@
 # TRABALHO - CÁLCULO NÚMERICO
-## **Marcos Vinicius Freitas Pinto - 476644 - Universidade Federal do Ceará**
+## **Marcos Vinicius Freitas Pinto - Universidade Federal do Ceará**
 ******************************************************
 
 **Pré-requisitos:**
