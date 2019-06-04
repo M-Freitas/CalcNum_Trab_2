@@ -18,9 +18,10 @@ matriz = tuple(funcs.read_Matriz(arq_dpd.readlines()))
 vct_idpd = funcs.read_Matriz(arq_idpd.readlines())
 
 param_A = funcs.dif_Zero('parâmetro A')
-	
+(leng_m, major) = funcs.quad_Matriz(matriz)
+leng_v = (len(vct_idpd[0]) == len(matriz))	
 
-if len(matriz) == len(matriz[0]):
+if (leng_v == True) and (leng_m == True):
 
 	determs = funcs.determ_Matriz(matriz, vct_idpd, True)
 
@@ -43,6 +44,12 @@ if len(matriz) == len(matriz[0]):
 		exit(0)
 else:
 	show_menu.clear()
-	print("\nMatriz com o número de LINHAS diferente do número de COLUNAS!!!\n\nEntrem com uma MATRIZ QUADRADA!!!!!\n")
+	if leng_m == False:
+		print("\nMatriz com o número de LINHAS diferente do número de COLUNAS!!!\n\nEntrem com uma MATRIZ QUADRADA!!!!!\n")
+	if leng_v == False:
+		if(len(vct_idpd[0]) < len(matriz[major])):
+			print("\nVetor dos TERMOS INDEPENDENTES está com o número de TERMOS, MENOR que o NÚMERO DE LINHAS DA MATRIZ!!!\n\n")
+		else:
+			print("\nVetor dos TERMOS INDEPENDENTES está com o número de TERMOS, MAIOR que o NÚMERO DE LINHAS DA MATRIZ!!!\n\n")
 	show_menu.enter(2)
 	show_menu.clear()
