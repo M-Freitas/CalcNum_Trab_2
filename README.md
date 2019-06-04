@@ -1,6 +1,6 @@
 # TRABALHO - CÁLCULO NÚMERICO
-## **Marcos Vinicius Freitas Pinto
-## Curso: Bacharelado em Estatística - Universidade Federal do Ceará**
+## Marcos Vinicius Freitas Pinto
+## Curso: Bacharelado em Estatística - Universidade Federal do Ceará
 ******************************************************
 
 **Pré-requisitos:**
