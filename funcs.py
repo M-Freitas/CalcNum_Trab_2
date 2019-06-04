@@ -77,6 +77,18 @@ def dif_Zero(var):
 
 	return var_tmp
 
+#FUNÇÃO PARA SABER SE A MATRIZ É QUADRADA
+def quad_Matriz(matriz):
+	equals = True
+	major = 0
+	for i in range(len(matriz)):
+		if (len(matriz[0]) ==  len(matriz[i])):
+			continue
+		else:
+			equals = False
+			major = i
+	return equals, major
+
 #FUNÇÃO PARA TRANSFORMAR A MATRIZ EM TRIANGULAR SUPERIOR
 def triang_Matriz(matriz_tmp, vetor_tmp, gauss):
 	mod = 0
