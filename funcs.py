@@ -58,7 +58,7 @@ def write_Matriz(matriz, vetor, res_Cramer, res_Gauss, res_GJordan,res_Final, de
 
 	table_res = prettytable.PrettyTable()
 	table_res.title = "----------------- Resultado dos Métodos -----------------"
-	table_res.field_names = ["Variável", "Parâm. A","Cramer", "Gauss", "Gauss-Jordan","[D_{n} * A]"]
+	table_res.field_names = ["Variável", "Parâm. A","Cramer", "Gauss", "Gauss-Jordan","Amplitude"]
 
 	if len(res_Cramer) == len(res_Gauss) == len(res_GJordan):
 		for i in range(len(res_Cramer)):
