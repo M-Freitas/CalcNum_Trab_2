@@ -45,9 +45,12 @@ def msg_user():
 	table_show.add_row(["12;12;12"])
 	clear()
 	print(table_show)
-	dir_dpd = os.getcwd() + '\Termos_dpd.txt'
-	dir_idpd = os.getcwd() + '\Termos_idpd.txt'
-	
+	if (platform.system() == 'Windows'):
+		dir_dpd = os.getcwd() + '\Termos_dpd.txt'
+		dir_idpd = os.getcwd() + '\Termos_idpd.txt'
+	else:
+		dir_dpd = os.getcwd() + '/Termos_dpd.txt'
+		dir_idpd = os.getcwd() + '/Termos_idpd.txt'
 	enter(1)
 	if (os.path.exists(dir_dpd) and os.path.exists(dir_idpd)) == False:
 		loop_arq(dir_dpd, dir_idpd)
