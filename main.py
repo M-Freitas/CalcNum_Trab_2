@@ -23,14 +23,13 @@ leng_v = (len(vct_idpd[0]) == len(matriz))
 
 if (leng_v == True) and (leng_m == True):
 
-	determs = funcs.determ_Matriz(matriz, vct_idpd, True)
+	determs = round(np.linalg.det(matriz))
 
-	if determs[0] != 0:
-		res_Cramer = funcs.Cramer(determs)
+	if determs != 0:
 		res_Gauss = funcs.Gauss(matriz, vct_idpd)
-		res_gauss_jordan = funcs.Gauss_Jordan(matriz, vct_idpd)
-		res_final = funcs.res_Final(res_Cramer, res_Gauss, res_gauss_jordan, param_A)	
-		funcs.write_Matriz(matriz, vct_idpd, res_Cramer, res_Gauss, res_gauss_jordan, res_final, determs, param_A)
+		res_GaussJordan = funcs.Gauss_Jordan(matriz, vct_idpd)
+		(res_D, res_Amp) = funcs.Cramer(res_Gauss, param_A)	
+		funcs.write_Matriz(matriz, vct_idpd, res_Gauss, res_GaussJordan, res_D, res_Amp, param_A)
 		show_menu.clear()
 		print("\nPrograma executado com sucesso!!!\n\nResultados armazenados no arquivo 'res_Sistema.txt'!!\n")
 		show_menu.enter(2)
